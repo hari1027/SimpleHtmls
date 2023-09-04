@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			Demo On JS
+		</title>
+		<body>
+		      <p id="id1" ></p>
+		<script>
+		  document.writeln("<h1>Hello,welcome to JS</h1>");
+		  
+		  var var1="Hari";
+		  var var2=21;
+		  document.writeln("<br><br> I am " + var1 + " <br> My Age is " + var2);
+		  
+		  document.writeln("<br>" +typeof(var1) + "<br>" + typeof(var2));
+		  
+		  document.writeln("<br> <h1> prime number check</h1>");
+		  var num=16;
+		  var count=0;
+		  
+		  for(var i=2;i<=num /2 ;i++)
+		  {
+		  if(num%i == 0)
+		  {
+		  count++;
+		  break;
+		  }
+		  }
+		  if(count==0)
+		  document.writeln("<h2> primenumber</h2>");
+		  else
+		  document.writeln("<h2> not a primenumber</h2>");
+		  
+		  document.writeln("<br><h1> Switchcase </h1><br>");
+		  
+		  var Number=6;
+		  
+		  switch (Number)
+		  {
+		       case 1:document.writeln("one");
+			     break;
+			   case 2:document.writeln("two");
+			     break;
+			   case 3:document.writeln("three");
+			     break;
+			   case 4:document.writeln("four");
+			     break;
+			   case 5:document.writeln("five");
+			     break;
+			   case 6:document.writeln("six");
+			     break;
+			   case 7:document.writeln("seven");
+			     break;
+			   case 8:document.writeln("eight");
+			     break;
+			   case 9:document.writeln("nine");
+			     break;
+			   case 0:document.writeln("zero");
+			     break;
+			   
+			   
+			   default : document.writeln("NOT A SINGLE DIGIT NUMBER");
+		 }
+		   
+		   
+		    document.writeln("<br><h1> Function </h1><br>");
+			
+			document.writeln(add(10,12));
+			
+		   function add(num1,num2)
+		   {
+		      return num1+num2;
+		   }
+		   
+		   document.writeln("<h2> methods </h2>");
+		   document.writeln("<br><br>");
+		   
+		   var str1 = "hari";
+		   var str2 = "haran" ;
+		   
+		   document.writeln(str1.concat(str2));
+		   document.writeln("<br>" + str1.length);
+		   document.writeln("<br>" + str2.charAt(3));
+		   document.writeln("<br>" + str2.substr(1,3)+"<br>");
+		   var str3 = str1.replace("ri","ey");
+		   document.writeln(str3);
+		   var str4 = str2.toUpperCase();
+		   document.writeln("<br>" + str4);
+		   var str5 = str4.toLowerCase();
+		   document.writeln("<br>" + str5);
+		   document.writeln("<br>" + str5.indexOf('a'));
+		   document.writeln("<br>" + str3.match(str1));
+		   document.writeln("<br>" + str5.match(str2));
+		   document.writeln("<br>" + str5.fontcolor("orange"));
+		   document.writeln("<br>" + str5.bold());
+		   
+		   document.writeln("<h2>Demo on arrays </h2><br><br>");
+		   const names=["hari","archu","venky"];
+		   document.writeln(names[1] +"<br>");
+		   
+		   names.push("aruna");
+		   
+		   for(var i=0;i<names.length ;i++)
+		    document.writeln("<br>" + names[i]);
+			
+			
+			
+			 document.writeln("<br>" + names.includes("archu"));
+			 
+			 var a=[1,2,3,4],b=[6,7,8,9];
+			
+			 
+			 document.writeln("<br>" + names.reverse());
+			 document.writeln("<br>" + names.sort());
+			 
+			 document.writeln("<br>" + names.pop());
+			 
+			 document.writeln("<br>" + a.map(Math.sqrt));
+			 
+			 document.getElementById("id1").innerHTML=names;
+			 
+			 document.writeln("<br>" + typeof(names));
+             document.writeln("<br>" + typeof(names[1]));
+			 
+			 a.splice(2,3,78,77,76);
+			 document.writeln("<br>" + a);
+			  document.writeln("<br>" + a.slice(1,3));
+			  
+			  
+			  document.writeln("<br>");
+			 const ages=[35,78,56,12,4,94,45,18,63];
+			 const filteredAges = ages.filter((i)=>{
+			     if(i<18)
+				 return i 
+				 })
+			
+			 
+			 document.writeln( filteredAges + ",");
+			 
+			 const result = ages.filter((i)=>i<18).map((i)=>i+12);
+			 document.writeln("<br>" + result);
+			 
+			 function dosum(...param)
+			 {
+			   let sum=0;
+			   for(var i of param)
+			   sum=sum+i;
+			   document.writeln("<br>" + sum);
+			 }
+			 
+			 dosum(10,20,20,75,5,-30);
+			 
+			 let arr1=[1,2,3,4,5,6];
+			 let arr2=[5,6,7,8,9,10];
+			 let arr3=["hari","archu","venky"]
+			 
+			 arr1=[...arr1,...arr2,...arr3];
+			 document.writeln("<br>" + arr1);
+			 
+			 //document.writeln("<br>" + arr1.concat(arr2));
+			 //document.writeln("<br>" + arr1.concat(arr3));
+				  
+             document.writeln("<h2>Demo on sets </h2><br><br>");
+             
+            
+
+			 var s1=new Set();
+			 document.writeln("<br>" + typeof(s1));
+			 
+			 s1.add("hari");
+			 s1.add(42);
+			 s1.add(true);
+			 
+			
+			 for(var i of s1)
+			 document.writeln("<br>" + i);
+			 
+			  var arr = Array.from(s1);
+			 
+			 document.writeln("<br>" + arr);
+			 document.writeln("<br>" + arr[1]);
+			 
+			 var setitr=s1.values();
+			 
+			 for(var itr1 of setitr)
+			  document.writeln("<br>" + itr1);
+			  
+			  
+			 
+			 
+			 
+			 
+			
+			          
+	 </script>
+
+             
+	      
+	
+	
+	</body>
+	</head>
+	</html>

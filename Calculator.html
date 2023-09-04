@@ -1,0 +1,64 @@
+<html>
+<head>
+<script>
+  function add(){
+    var nm1,nm2;
+    nm1=document.getElementById('id1').value;
+    nm2=document.getElementById('id2').value;
+    nm3=parseInt(nm1)+parseInt(nm2);
+    document.getElementById("para1").innerHTML=nm3;
+  }
+  function sub(){
+    var nm1,nm2;
+    nm1=document.getElementById('id1').value;
+    nm2=document.getElementById('id2').value;
+    nm3=parseInt(nm1)-parseInt(nm2);
+    document.getElementById("para1").innerHTML=nm3;
+  }
+  function mul(){
+    var nm1,nm2;
+    nm1=document.getElementById('id1').value;
+    nm2=document.getElementById('id2').value;
+    nm3=parseInt(nm1)*parseInt(nm2);
+    document.getElementById("para1").innerHTML=nm3;
+  }
+  function div(){
+    var nm1,nm2;
+    nm1=document.getElementById('id1').value;
+    nm2=document.getElementById('id2').value;
+    nm3=parseInt(nm1)/parseInt(nm2);
+    document.getElementById("para1").innerHTML=nm3;
+  }
+</script>
+</head>
+
+<body>
+ <header align="center" style="font-size:30px ; background-color:green ;margin-left:600px ;margin-right:600px;" >
+  
+		Calculator
+		</header>
+		<br><br>
+  <form   align="center" style="background-color:pink;margin-left:600px;margin-right:600px;" >
+  
+    <label for="num1"><b>First Number:</b></label> <br>
+    <input type=text id=id1 name=num1>
+    <br><br><br>
+
+    <label for="num2"><b>Second Number:</b></label> <br>
+    <input type=text id=id2 name=num2>
+    <br><br><br><br>
+
+    <input type=button onclick="add()" value="Addition">
+    <input type=button onclick="sub()" value="Subtraction">
+    <input type=button  onclick="mul()" value="Multiplication">
+    <input type=button onclick="div()" value="Division">
+
+    <br><br>
+    
+
+    <center><h2> Result is: </h2> 
+	<h2 id=para1></h2></center>
+  </form>
+</div>
+</body>
+</html>

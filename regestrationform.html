@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			Demo On Form
+		</title>
+		
+	</head>
+	<body>
+		<header align="center" style="font-size:30px ; background-color:green; margin-left:300px;margin-right:300px;" >
+  
+		Registration Form
+		</header>
+		<br><br>
+		 <form align="center" style="background-color:pink ;margin-left:300px;margin-right:300px;" >
+   
+		 
+		    <label for="uname"><b>User_Name :</label><br>
+			<input type="text" name="uname" required pattern="[A-Z]{1}[a-z]{1,}"><br><br>
+			
+			<label for="pwd"><b>Password :</label><br>
+			<input type="password" name="pwd" required pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}"><br><br>
+			
+			<label for="cpwd"><b>Confirmation_Password :</label><br>
+			<input type="password" name="cpwd" required pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}"><br><br>
+			
+		
+		    <label for="fname"><b>First_Name :</label><br>
+			<input type="text" name="fname" required pattern="[A-Z]{1}[a-z]{1,}"  ><br><br>
+			
+			<label for="lname"><b>Last_Name :</label><br>
+			<input type="text" name="lname" pattern="[A-Za-z]{1,}"><br><br>
+			
+			
+			<label for="dob"><b>Date_of_Birth :</label><br>
+			<input type="Date" name="dob" required><br><br>
+			
+			<label for="Age"><b>Age :</label><br>
+			<input type="number" min="20" max="60" required ><br><br>
+			
+			<label for="mail"><b>Email :</label><br>
+			<input type="email" name="mail" required><br><br>
+			
+			<label for="gender"  ><b>Gender :</label><br>
+			<input type="radio" name="gender" required checked>Male
+			<input type="radio" name="gender">Female
+			<input type="radio" name="gender">Other
+			
+			<br><br>
+			
+			<label for="qual"><b>Qualificaiton :</label><br>
+			<select name="qual" required>
+			    <option hidden selected ></option>
+				<option>10thGrade</option>
+				<option>12thGrade</option>
+				<option>Polytechnique</option>
+				<option>BE</option>
+				<option>B.Tech</option>
+				<option>M.Tech</option>
+				<option>M.B.A</option>
+				<option>Phd</option>
+			 </select>
+			 
+			 <br><br>
+			 
+			<label for="skill" ><b>Skillset :</label><br>
+			<input type="checkbox" name="skill" required>AnyProgrammingLanguage <br>
+			<input type="checkbox" name="skill">Alogorithms <br>
+			<input type="checkbox" name="skill">DataStructure <br>
+			<input type="checkbox" name="skill">WebPage Designing <br>
+			<input type="checkbox" name="skill">GraphicDesigning <br>
+			<input type="checkbox" name="skill">CyberSecurity <br>
+			
+			<br><br>
+			
+			<label for="Experience"><b>Experience :</label><br>
+			<input type="number" min="0" max="40" required >
+			
+			<br><br>
+			
+			<label for="Education Institutes"><b>EducationalInstitutes :</label><br><br>
+			10thGrade : <br> <input type="text" name="10thGrade" size="100" required> <br>
+			12thGrade : <br>  <input type="text" name="12thGrade" size="100"> <br>
+			UnderGraduation :  <br> <input type="text" name="UG" size="100"> <br>
+			PostGraduation : <br> <input type="text" name="PG" size="100"> <br>
+			Experience : <br>  <input type ="text" name="companyname" size="100"> <br>
+			
+			<br><br>
+			
+			<label for="Percentage obtained"><b>Percentage Obtained In Education levels (convert it to out of 100%) </label><br><br>
+			10thGrade : <br>  <input type="number" min="0" max="100" required><br>
+			12thGrade : <br> <input type="number" min="0" max="100"><br>
+			UnderGraduation : <br> <input type="number" min="0" max="100"><br>
+			PostGraduation : <br> <input type="number" min="0" max="100"> <br>
+			
+			<br><br>
+			
+			<label for="Mobilenumber"><b>Mobilenumber :</label> <br>
+			<input type="text" name="mobilenumber" pattern="[6-9]{1}[0-9]{9,9}" required>
+			
+			<br><br>
+			
+			<label for="address"><b>Address :</label><br>
+			<textarea name="address" rows="5" cols="50" required></textarea>
+			
+			<br><br>
+			
+			<input type="submit">
+			<input type="reset">
+			
+		 </form>
+			
+	 </body>
+</html>
